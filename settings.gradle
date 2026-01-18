@@ -1,0 +1,20 @@
+rootProject.name = 'Kawalia'
+
+// Platform
+include 'platform'
+
+include 'platform:kawalia-bootloader'
+include 'platform:kawalia-bootloader:api'
+
+include 'platform:kawalia-network'
+include 'platform:kawalia-network:discovery'
+
+// Unit
+include 'unit'
+include 'unit:kawalia-actuator'
+include 'unit:kawalia-popeye'
+include 'unit:kawalia-i18n'
+include 'unit:kawalia-config'
+include 'unit:kawalia-lifecycle'
+
+

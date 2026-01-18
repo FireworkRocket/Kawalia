@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+}
+
+repositories {
+    mavenCentral()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    implementation("org.jooq:jooq:3.20.9")
+    implementation("org.mybatis:mybatis:3.5.11")
+    implementation("io.github.classgraph:classgraph:4.8.181")
+}

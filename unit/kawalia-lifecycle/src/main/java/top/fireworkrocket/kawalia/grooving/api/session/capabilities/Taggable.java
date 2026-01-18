@@ -1,0 +1,13 @@
+package top.fireworkrocket.kawalia.grooving.api.session.capabilities;
+
+import java.util.Map;
+
+@FunctionalInterface
+public interface Taggable {
+    Map<String, String> getTags();
+
+    default String getTag(String key) {
+        return getTags().get(key);
+    }
+}
+    
