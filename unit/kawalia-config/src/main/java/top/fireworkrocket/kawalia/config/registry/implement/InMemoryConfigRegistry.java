@@ -95,8 +95,7 @@ public final class InMemoryConfigRegistry implements ConfigRegistry {
     }
 
     private boolean isTypeCompatible(Type expectedType, Class<?> actualClass) {
-        if (expectedType instanceof Class) {
-            Class<?> expectedClass = (Class<?>) expectedType;
+        if (expectedType instanceof Class<?> expectedClass) {
             if (expectedClass.isPrimitive()) {
                 return getWrapperClass(expectedClass).isAssignableFrom(actualClass);
             }

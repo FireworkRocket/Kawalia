@@ -58,7 +58,7 @@ public class AnnotationConfigScanner implements ConfigScanner {
                 : field.getName();
 
         String fullKey = ownerId + "." + simpleKey;
-        Object defaultValue = null;
+        Object defaultValue;
 
         try {
             field.setAccessible(true);

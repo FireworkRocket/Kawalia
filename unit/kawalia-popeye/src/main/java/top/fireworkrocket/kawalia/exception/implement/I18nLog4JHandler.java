@@ -11,14 +11,14 @@ import top.fireworkrocket.kawalia.i18n.api.Translations;
 
 import java.util.Locale;
 
-public final class ExceptionHandlerService implements ExceptionHandler {
-    private static final String WRAPPER_FQCN = ExceptionHandlerService.class.getName();
-    private static final Logger LOGGER = LogManager.getLogger(ExceptionHandlerService.class);
+public final class I18nLog4JHandler implements ExceptionHandler {
+    private static final String WRAPPER_FQCN = I18nLog4JHandler.class.getName();
+    private static final Logger LOGGER = LogManager.getLogger(I18nLog4JHandler.class);
 
     private final Messages messages;
     private final HeapDump heapDumpService;
 
-    public ExceptionHandlerService(Translations translations, Locale locale, HeapDump heapDumpService) {
+    public I18nLog4JHandler(Translations translations, Locale locale, HeapDump heapDumpService) {
         this.messages = translations.forLocale(locale);
         this.heapDumpService = heapDumpService;
     }

@@ -18,6 +18,6 @@ public record ServiceEndpoint(
         if (port <= 0 || port > 65535) {
             throw new IllegalArgumentException("network.discovery.error.endpoint.port_invalid");
         }
-        metadata = Collections.unmodifiableMap(new java.util.HashMap<>(metadata));
+        metadata = Map.copyOf(metadata);
     }
 }

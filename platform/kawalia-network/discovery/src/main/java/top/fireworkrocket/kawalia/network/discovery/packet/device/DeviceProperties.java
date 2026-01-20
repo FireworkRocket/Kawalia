@@ -42,9 +42,7 @@ public record DeviceProperties(
                 additionalProperties,
                 "network.discovery.properties.additional"
         );
-        additionalProperties = Collections.unmodifiableMap(
-                new HashMap<>(additionalProperties)
-        );
+        additionalProperties = Map.copyOf(additionalProperties);
     }
 
     public static DeviceProperties createDefault(
